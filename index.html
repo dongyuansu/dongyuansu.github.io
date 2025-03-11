@@ -41,17 +41,47 @@
             font-weight: bold;
             margin-top: 20px;
         }
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-switch button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .lang-switch button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <div class="lang-switch">
+        <button onclick="switchLanguage('zh')">中文</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <header id="header-zh">
         <h1>苏东远</h1>
         <p>苏东远，2019年6月本科毕业于深圳大学计算机与软件学院高性能班，2024年12月博士毕业于深圳大学（导师崔来中教授），研究方向聚焦车联网的数据传输、协作学习与协作推理机制。</p>
         <p>在TSC、ICNP、TMM、TITS、MM、CN等国际期刊和会议发表论文6篇，授权国家发明专利1项，担任TON、TMM、CCPE等期刊的审稿人。</p>
         <p class="contact-info">欢迎对车联网、联邦学习、协作学习、协作推理、移动边缘计算感兴趣的同学联系：<a href="mailto:sudongyuan@sztu.edu.cn">sudongyuan@sztu.edu.cn</a></p>
     </header>
 
-    <div class="section">
+    <header id="header-en" style="display: none;">
+        <h1>Dongyuan Su</h1>
+        <p>Dongyuan Su received his Bachelor's degree in June 2019 from the High Performance Computing Class of the College of Computer Science and Software Engineering at Shenzhen University. He obtained his Ph.D. in December 2024 from Shenzhen University (supervised by Professor Laizhong Cui). His research focuses on data transmission, collaborative learning, and collaborative reasoning mechanisms in vehicular networks.</p>
+        <p>He has published 6 papers in international journals and conferences such as TSC, ICNP, TMM, TITS, MM, and CN, and has been granted 1 national invention patent. He serves as a reviewer for journals such as TON, TMM, and CCPE.</p>
+        <p class="contact-info">Students interested in vehicular networks, federated learning, collaborative learning, collaborative reasoning, and mobile edge computing are welcome to contact: <a href="mailto:sudongyuan@sztu.edu.cn">sudongyuan@sztu.edu.cn</a></p>
+    </header>
+
+    <div class="section" id="education-zh">
         <h2>教育经历</h2>
         <ul>
             <li><strong>2019/09 - 2024/12</strong>，深圳大学，计算机科学与技术专业，工学博士（硕博连读）</li>
@@ -59,14 +89,29 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="education-en" style="display: none;">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>2019/09 - 2024/12</strong>, Shenzhen University, Ph.D. in Computer Science and Technology (Direct Ph.D. Program)</li>
+            <li><strong>2015/09 - 2019/06</strong>, Shenzhen University, Bachelor of Engineering in Computer Science and Technology</li>
+        </ul>
+    </div>
+
+    <div class="section" id="work-zh">
         <h2>工作经历</h2>
         <ul>
             <li><strong>2025/01 - 至今</strong>，深圳技术大学，大数据与互联网学院，讲师</li>
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="work-en" style="display: none;">
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>2025/01 - Present</strong>, Shenzhen Technology University, School of Big Data and Internet, Lecturer</li>
+        </ul>
+    </div>
+
+    <div class="section" id="research-zh">
         <h2>主要研究领域</h2>
         <ul>
             <li>车联网</li>
@@ -76,7 +121,17 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="research-en" style="display: none;">
+        <h2>Research Areas</h2>
+        <ul>
+            <li>Vehicular Networks</li>
+            <li>Distributed Machine Learning</li>
+            <li>Federated Learning</li>
+            <li>Mobile Edge Computing</li>
+        </ul>
+    </div>
+
+    <div class="section" id="publications-zh">
         <h2>主要成果</h2>
             <ul>
                 <li>[1] Dongyuan Su, Yipeng Zhou, Laizhong Cui, Song Guo. <em>Boosting Dynamic Decentralized Federated Learning by Diversifying Model Sources</em>, IEEE Transactions on Services Computing, 2024, 17(4):1400-1413. DOI: <a href="https://doi.org/10.1109/TSC.2024.3377157">10.1109/TSC.2024.3377157</a>. (CCF-A类期刊，中科院大类二区)</li>
@@ -88,7 +143,19 @@
             </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="publications-en" style="display: none;">
+        <h2>Publications</h2>
+            <ul>
+                <li>[1] Dongyuan Su, Yipeng Zhou, Laizhong Cui, Song Guo. <em>Boosting Dynamic Decentralized Federated Learning by Diversifying Model Sources</em>, IEEE Transactions on Services Computing, 2024, 17(4):1400-1413. DOI: <a href="https://doi.org/10.1109/TSC.2024.3377157">10.1109/TSC.2024.3377157</a>. (CCF-A Journal, CAS Category 2)</li>
+                <li>[2] Dongyuan Su, Yipeng Zhou, Laizhong Cui, Quan Z. Sheng. <em>Communication Cost-aware Client Selection in Online Federated Learning: A Lyapunov Approach</em>, Computer Networks, 2024, 249:110517. DOI: <a href="https://doi.org/10.1016/j.comnet.2024.110517">10.1016/j.comnet.2024.110517</a>. (CCF-B Journal, CAS Category 2)</li>
+                <li>[3] Dongyuan Su, Yipeng Zhou, Laizhong Cui. <em>Boost Decentralized Federated Learning in Vehicular Networks by Diversifying Data Sources</em>, IEEE ICNP, 2022, 1-11. DOI: <a href="https://doi.org/10.1109/ICNP55882.2022.9940426">10.1109/ICNP55882.2022.9940426</a>. (CCF-B Conference)</li>
+                <li>[4] Dongyuan Su, Laizhong Cui, Lei Zhang, Yanyan Suo, Yan Qiu. <em>Rate Adaptation and Block Scheduling for Delay-sensitive Multimedia Applications</em>, ACM MM, 2021, 4828-4832. DOI: <a href="https://doi.org/10.1145/3474085.3479224">10.1145/3474085.3479224</a>. (CCF-A Conference)</li>
+                <li>[5] Laizhong Cui, Dongyuan Su, Shu Yang, Zhi Wang, Zhong Ming. <em>TCLiVi: Transmission Control in Live Video Streaming Based on Deep Reinforcement Learning</em>, IEEE Transactions on Multimedia, 2020, 23:651-663. DOI: <a href="https://doi.org/10.1109/TMM.2020.2985631">10.1109/TMM.2020.2985631</a>. (CCF-B Journal, CAS Category 1)</li>
+                <li>[6] Laizhong Cui, Dongyuan Su, Yipeng Zhou, Lei Zhang, Yulei Wu, Shiping Chen. <em>Edge Learning for Surveillance Video Uploading Sharing in Public Transport Systems</em>, IEEE Transactions on Intelligent Transportation Systems, 2020, 22(4):2274-2285. DOI: <a href="https://doi.org/10.1109/TITS.2020.3008420">10.1109/TITS.2020.3008420</a>. (CCF-B Journal, CAS Category 1)</li>
+            </ul>
+    </div>
+
+    <div class="section" id="honors-zh">
         <h2>主要荣誉</h2>
             <h3>学术竞赛</h3>
                 <ul>
@@ -104,7 +171,23 @@
                 </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="honors-en" style="display: none;">
+        <h2>Honors and Awards</h2>
+            <h3>Academic Competitions</h3>
+                <ul>
+                    <li>2021/10, ACM Multimedia Grand Challenge – Meet Deadline Requirements (CCF-A Conference Competition), Runner-up</li>
+                    <li>2021/10, ACM MM Student Travel Grant</li>
+                    <li>2020/06, AITrans 2nd Intelligent Network Technology Challenge, Second Prize</li>
+                </ul>
+            <h3>University Awards</h3>
+                <ul>
+                    <li>Ph.D.: Shenzhen University Outstanding Doctoral Student Selection and Funding Program (Outstanding Doctoral Program), Shenzhen University Doctoral Student Top Innovative Talent Scholarship Special Award, Shenzhen University College of Computer Science and Software Engineering Doctoral Student Top Talent Cultivation Program (Top Talent Program) Grade A, etc.</li>
+                    <li>Master's: National Scholarship, Academic Scholarship Special Award, etc.</li>
+                    <li>Bachelor's: Shenzhen University Outstanding Graduate, Honors Bachelor's Degree, Chen Guoliang Academician Scholarship, Tencent Progressive Scholarship, etc.</li>
+                </ul>
+    </div>
+
+    <div class="section" id="reviewer-zh">
         <h2>审稿人</h2>
             <ul>
                 <li>IEEE/ACM Transactions on Networking</li>
@@ -112,6 +195,50 @@
                 <li>Concurrency and Computation: Practice and Experience</li>
             </ul>
     </div>
-    
+
+    <div class="section" id="reviewer-en" style="display: none;">
+        <h2>Reviewer</h2>
+            <ul>
+                <li>IEEE/ACM Transactions on Networking</li>
+                <li>IEEE Transactions on Multimedia</li>
+                <li>Concurrency and Computation: Practice and Experience</li>
+            </ul>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'zh') {
+                document.getElementById('header-zh').style.display = 'block';
+                document.getElementById('header-en').style.display = 'none';
+                document.getElementById('education-zh').style.display = 'block';
+                document.getElementById('education-en').style.display = 'none';
+                document.getElementById('work-zh').style.display = 'block';
+                document.getElementById('work-en').style.display = 'none';
+                document.getElementById('research-zh').style.display = 'block';
+                document.getElementById('research-en').style.display = 'none';
+                document.getElementById('publications-zh').style.display = 'block';
+                document.getElementById('publications-en').style.display = 'none';
+                document.getElementById('honors-zh').style.display = 'block';
+                document.getElementById('honors-en').style.display = 'none';
+                document.getElementById('reviewer-zh').style.display = 'block';
+                document.getElementById('reviewer-en').style.display = 'none';
+            } else if (lang === 'en') {
+                document.getElementById('header-zh').style.display = 'none';
+                document.getElementById('header-en').style.display = 'block';
+                document.getElementById('education-zh').style.display = 'none';
+                document.getElementById('education-en').style.display = 'block';
+                document.getElementById('work-zh').style.display = 'none';
+                document.getElementById('work-en').style.display = 'block';
+                document.getElementById('research-zh').style.display = 'none';
+                document.getElementById('research-en').style.display = 'block';
+                document.getElementById('publications-zh').style.display = 'none';
+                document.getElementById('publications-en').style.display = 'block';
+                document.getElementById('honors-zh').style.display = 'none';
+                document.getElementById('honors-en').style.display = 'block';
+                document.getElementById('reviewer-zh').style.display = 'none';
+                document.getElementById('reviewer-en').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
